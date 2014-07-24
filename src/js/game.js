@@ -13,7 +13,16 @@
       , y = this.game.height / 2;
 
       this.game.physics.startSystem(Phaser.Physics.P2JS);
-     
+      
+      
+      //Cargar el mapa
+      this.map = this.game.add.tilemap('map');
+      this.map.addTilesetImage('floor');
+      this.map.setCollisionByExclusion([ 0 ]);
+      this.layer = this.map.createLayer('Tile Layer 1');
+      this.layer.resizeWorld();
+      this.physics.p2.convertTilemap(this.map, this.layer);
+      
 
       this.camera.follow(this.player, Phaser.Camera.STYLE_LOCKON);
       //this.camera.scale(0.1,0.1);

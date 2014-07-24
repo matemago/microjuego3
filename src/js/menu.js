@@ -30,7 +30,7 @@
     },
 
     onDown: function () {
-      this.game.state.start('microjuego3-game');
+      this.game.state.start('game');
     }
   };
 
