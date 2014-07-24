@@ -13,7 +13,7 @@
         , y = this.game.height / 2;
 
 
-      this.titleTxt = this.add.bitmapText(x, y, 'minecraftia', 'Example Game' );
+      this.titleTxt = this.add.bitmapText(x, y, 'minecraftia', 'La molécula' );
       this.titleTxt.align = 'center';
       this.titleTxt.x = this.game.width / 2 - this.titleTxt.textWidth / 2;
 
@@ -34,7 +34,7 @@
     }
   };
 
-  window['microjuego1'] = window['microjuego1'] || {};
-  window['microjuego1'].Menu = Menu;
+  window['microjuego3'] = window['microjuego3'] || {};
+  window['microjuego3'].Menu = Menu;
 
 }());

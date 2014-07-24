@@ -14,7 +14,10 @@
 
       this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
       this.load.setPreloadSprite(this.asset);
-      this.load.image('player', 'assets/player.png');
+      this.load.image('player', 'assets/molecula.png');
+      this.load.image('target', 'assets/.png');
+      this.load.tilemap('map', 'assets/level.json', null, Phaser.Tilemap.TILED_JSON);
+      this.load.image('floor', 'assets/.jpg')
       this.load.bitmapFont('minecraftia', 'assets/minecraftia.png', 'assets/minecraftia.xml');
     },
 
@@ -33,7 +36,7 @@
     }
   };
 
-  window['microjuego1'] = window['microjuego1'] || {};
-  window['microjuego1'].Preloader = Preloader;
+  window['microjuego3'] = window['microjuego3'] || {};
+  window['microjuego3'].Preloader = Preloader;
 
 }());

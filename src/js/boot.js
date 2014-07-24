@@ -29,8 +29,8 @@
     }
   };
 
-  window['microjuego1'] = window['microjuego1'] || {};
-  window['microjuego1'].Boot = Boot;
+  window['microjuego3'] = window['microjuego3'] || {};
+  window['microjuego3'].Boot = Boot;
 
 }());
 
