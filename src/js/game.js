@@ -12,23 +12,25 @@
       var x = this.game.width / 2
       , y = this.game.height / 2;
 
-      this.game.physics.startSystem(Phaser.Physics.P2JS);
-      
-      
-      //Cargar el mapa
+     
+		 this.game.physics.startSystem(Phaser.Physics.P2JS);
+
       this.map = this.game.add.tilemap('map');
       this.map.addTilesetImage('floor');
       this.map.setCollisionByExclusion([ 0 ]);
+      
+
       this.layer = this.map.createLayer('Tile Layer 1');
       this.layer.resizeWorld();
       this.physics.p2.convertTilemap(this.map, this.layer);
-      
-      
-      //Estructura del juego
+
+
+
+
       this.game.physics.p2.gravity.y = 250;
 
-      this.target1 = this.add.sprite(90, 70, 'target');
-      this.target2 = this.add.sprite(90, 70, 'target2');
+      this.target1 = this.add.sprite(200, 200, 'target');
+      this.target2 = this.add.sprite(100, 100, 'target2');
       this.player = this.add.sprite(x, y, 'player');
       this.game.physics.p2.enable([this.player, this.target1, this.target2]);
       this.player.body.collideWorldBounds;
@@ -43,7 +45,6 @@
       this.player.body.createBodyCallback(this.target2, function() {this.target2.kill();}, this);
 
       this.game.physics.p2.setImpactEvents(true);
-      
 
       this.camera.follow(this.player, Phaser.Camera.STYLE_LOCKON);
       //this.camera.scale(0.1,0.1);
